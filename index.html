@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社SUN十八</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/normalize.css@8.0.1,npm/bulma@0.9.3/css/bulma.min.css,npm/bulma@0.9.3/css/bulma-rtl.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <style>
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10em;
+            line-height: 1;
+            margin-bottom: .250em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper" class="p-6 has-text-centered">
+        <h1>0</h1>
+        <p>Through solar power generation,<br>we will strive to promote environmentally friendly renewable energy.</p>
+        <hr>
+        <!-- <p>私たちは太陽光発電を通じて、<br>環境に配慮した再生可能エネルギーの普及に努めていきます。</p> -->
+
+        <p class="mt-6"><small>株式会社SUN十八</small></p>
+    </div>
+
+    <script>
+        var yourElement = document.querySelector("h1");
+        anime({
+            targets: yourElement,
+            innerText: [0, 318],
+            easing: "easeInOutCirc",
+            duration: 3000,
+            round: true,
+            update: function(a) {
+                const value = a.animations[0].currentValue;
+                // const formattedNumber = numeral(value).format("0,000,000");
+                yourElement.innerHTML = value;
+            }
+        });
+    </script>
+</body>
+
+</html>
